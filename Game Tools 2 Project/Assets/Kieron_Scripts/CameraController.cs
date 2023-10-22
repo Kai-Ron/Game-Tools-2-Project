@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public Transform playerCameraPosition;
+    public Transform flyerCameraPosition;
+    public KeyCode viewKey = KeyCode.LeftAlt;
+
+    private bool view = false;
+
+    private void Update()
+    {   
+        controls();
+
+        if (view)
+        {
+            transform.position = flyerCameraPosition.position;
+        }
+        else
+        {
+            transform.position = playerCameraPosition.position;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void controls()
     {
-        
+        if (Input.GetKey(viewKey))
+        {
+            view = !view;
+        }
     }
+
 }
