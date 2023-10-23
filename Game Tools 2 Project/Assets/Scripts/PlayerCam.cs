@@ -2,36 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class PlayerCam : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    public Transform playerCameraPosition;
-    public Transform flyerCameraPosition;
-    public KeyCode viewKey = KeyCode.LeftAlt;
-
-    private bool view = false;
-
-    private void Update()
-    {   
-        controls();
-
-        if (view)
-        {
-            transform.position = flyerCameraPosition.position;
-        }
-        else
-        {
-            transform.position = playerCameraPosition.position;
-        }
-    }
-
-    private void controls()
-    {
-        if (Input.GetKey(viewKey))
-        {
-            view = !view;
-        }
-=======
     public float sensY;
     public float sensX;
 
@@ -62,7 +34,6 @@ public class CameraController : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
->>>>>>> Stashed changes
     }
 
 }
