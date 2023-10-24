@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     private bool view = false;
 
     private void Update()
-    {   
+    {
         controls();
 
         if (view)
@@ -30,6 +30,6 @@ public class CameraController : MonoBehaviour
         {
             view = !view;
         }
-    }
 
+    }
 }
