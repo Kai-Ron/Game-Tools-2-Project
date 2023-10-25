@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     private bool grounded;
 
-
     public Transform orientation;
 
     private float inputX;
