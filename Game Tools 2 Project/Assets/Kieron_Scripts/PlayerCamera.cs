@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public float sensX, sensY/*, sensZ*/;
-    private float rotX, rotY/*, zoom*/;
-    private float playerX = 0, playerY = 0, flyerX = 0, flyerY = 0;
+    public float sensX, sensY, sensZ;
+    private float rotX, rotY, zoom;
+    private float playerX = 0, playerY = 0, flyerX = 0, flyerY = 0, flyerZ;
     public Transform playerOrientation;
     public Transform flyerOrientation;
     public Transform playerPos;
@@ -22,6 +22,7 @@ public class PlayerCamera : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        pos = flyerPos;
     }
 
     private void Update()
@@ -30,36 +31,33 @@ public class PlayerCamera : MonoBehaviour
 
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
-        //float mouseZ = Input.GetAxisRaw("Mouse Scroll Wheel") * Time.deltaTime * sensZ;
-
-        //zoom += mouseZ;
-        //zoom = Mathf.Clamp(zoom, 3, 9);
+        float mouseZ = Input.GetAxisRaw("Mouse Scroll Wheel") * Time.deltaTime * sensZ;
 
         if (view && follow)
         {
             rotY += mouseX;
-            rotX += mouseY;
+            rotX -= mouseY;
+            zoom -= mouseZ;
 
+            zoom = Mathf.Clamp(zoom, 3, 9);
             rotX = Mathf.Clamp(rotX, 0, 90f);
             
-            //transform.rotation = Quaternion.Euler(rotX, rotY, 0);
+            //transform.LookAt(playerPos);
+            flyerPos.LookAt(playerPos);
+            flyerPos.rotation = Quaternion.Euler(rotX, rotY, 0);
 
-            flyerPos.localEulerAngles = new Vector3(rotX, rotY, 0);
+            //flyerPos.localEulerAngles = new Vector3(rotX, rotY, 0);
             //flyerOrientation.localEulerAngles = new Vector3(rotX, rotY, 0);
             //transform.localEulerAngles = new Vector3(rotX, rotY, 0);
 
-            flyerOrientation.LookAt(playerPos);
-            transform.LookAt(playerPos);
-
             playerOrientation.rotation = Quaternion.Euler(0, rotY, 0);
-
-            flyerPos.position = playerPos.position - flyerPos.forward;
+            flyerPos.position = playerPos.position - (flyerPos.forward * zoom);
         }
         else
         {
             if(follow)
             {
-                flyerPos.position = playerPos.position + (flyerPos.up * 5);
+                flyerPos.position = playerPos.position + (playerPos.up * 2) ;
             }
             
             rotY += mouseX;
@@ -78,29 +76,67 @@ public class PlayerCamera : MonoBehaviour
     {
         if (Input.GetKeyDown(viewKey))
         {   
-            if(view)
+            //flyerPos.LookAt(playerPos);
+            transform.rotation = Quaternion.Euler(0,0,0);
+
+            if(view && !follow)
             {
                 flyerX = rotX;
                 flyerY = rotY;
+                flyerZ = zoom;
                 rotX = playerX;
                 rotY = playerY;
             }
-            else
+            else if(view)
+            {
+                flyerX = rotY;
+                flyerY = rotY;
+                flyerZ = zoom;
+            }
+            else if (!follow)
             {
                 playerX = rotX;
                 playerY = rotY;
                 rotX = flyerX;
                 rotY = flyerY;
+                zoom = flyerZ;
             }
-
+            else
+            {
+                playerX = rotX;
+                playerY = rotY;
+                zoom = flyerZ;
+            }
             view = !view;
         }
 
         if (Input.GetKeyDown(followKey))
         {   
-            
-            follow = !follow;
+            //flyerPos.LookAt(playerPos);
 
+            if(view && !follow)
+            {
+                //transform.rotation = Quaternion.Euler(0,0,0);
+                rotX = 0;
+                rotY = 0;
+                zoom = flyerZ;
+                transform.rotation = flyerPos.rotation;
+                flyerPos.position = playerPos.position - (flyerPos.forward * zoom);
+            }
+            else if(!follow)
+            {
+                flyerX = 0;
+                flyerY = 0;
+            }
+            else if(view)
+            {
+                flyerX = rotX;
+                flyerY = rotY;
+                flyerZ = zoom;
+            }
+            //flyerPos.LookAt(playerPos);
+
+            follow = !follow;
         }
     }
 }
