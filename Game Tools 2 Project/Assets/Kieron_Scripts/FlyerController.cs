@@ -21,9 +21,11 @@ public class FlyerController : MonoBehaviour
 
     private Rigidbody rb;
 
-    private bool view = false, follow;
-
+    private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
+
+    private bool follow = false;
+    public KeyCode followKey = KeyCode.RightAlt;
 
     private void Start()
     {
@@ -54,51 +56,34 @@ public class FlyerController : MonoBehaviour
         {   
             view = !view;
         }
+
+        if (Input.GetKeyDown(followKey))
+        {   
+            follow = !follow;
+
+        }
     }
 
     private void Move()
     {
-        if(follow)
+        if(!follow)
         {
-            if(inputX == 0)
-            {
-                inputX = Input.GetAxisRaw("Horizontal");
-            }
-
-            if(inputZ == 0)
-            {
-                inputZ = Input.GetAxisRaw("Vertical");
-            }
+            moveDirection = (orientation.forward * inputZ) + (orientation.up * inputY) + (orientation.right * inputX);
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         }
-        
-        moveDirection = (orientation.forward * inputZ) + (orientation.up * inputY) + (orientation.right * inputX);
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 
     private void SpeedControl()
     {
-        Vector3 flatVelocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
-
-        if (flatVelocity.magnitude > moveSpeed)
+        if(!follow)
         {
-            Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitedVelocity.x, limitedVelocity.y, limitedVelocity.z);
-        }
-    }
+            Vector3 flatVelocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            follow = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            follow = false;
+            if (flatVelocity.magnitude > moveSpeed)
+            {
+                Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
+                rb.velocity = new Vector3(limitedVelocity.x, limitedVelocity.y, limitedVelocity.z);
+            }
         }
     }
 }
