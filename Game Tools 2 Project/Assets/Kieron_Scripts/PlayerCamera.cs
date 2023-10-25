@@ -11,9 +11,12 @@ public class PlayerCamera : MonoBehaviour
     public Transform flyerOrientation;
     public Transform playerPos;
     public Transform flyerPos;
+    private Transform pos;
 
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
+    private bool follow = false;
+    public KeyCode followKey = KeyCode.RightAlt;
 
     private void Start()
     {
@@ -32,24 +35,33 @@ public class PlayerCamera : MonoBehaviour
         //zoom += mouseZ;
         //zoom = Mathf.Clamp(zoom, 3, 9);
 
-        if (view)
+        if (view && follow)
         {
             rotY += mouseX;
             rotX += mouseY;
 
-            rotX = Mathf.Clamp(rotX, -45f, 45f);
+            rotX = Mathf.Clamp(rotX, 0, 90f);
             
             //transform.rotation = Quaternion.Euler(rotX, rotY, 0);
 
             flyerPos.localEulerAngles = new Vector3(rotX, rotY, 0);
+            //flyerOrientation.localEulerAngles = new Vector3(rotX, rotY, 0);
             //transform.localEulerAngles = new Vector3(rotX, rotY, 0);
+
+            flyerOrientation.LookAt(playerPos);
+            transform.LookAt(playerPos);
 
             playerOrientation.rotation = Quaternion.Euler(0, rotY, 0);
 
-            flyerPos.position = playerPos.position + flyerPos.forward;
+            flyerPos.position = playerPos.position - flyerPos.forward;
         }
         else
         {
+            if(follow)
+            {
+                flyerPos.position = playerPos.position + (flyerPos.up * 5);
+            }
+            
             rotY += mouseX;
             rotX -= mouseY;
 
@@ -82,6 +94,13 @@ public class PlayerCamera : MonoBehaviour
             }
 
             view = !view;
+        }
+
+        if (Input.GetKeyDown(followKey))
+        {   
+            
+            follow = !follow;
+
         }
     }
 }
