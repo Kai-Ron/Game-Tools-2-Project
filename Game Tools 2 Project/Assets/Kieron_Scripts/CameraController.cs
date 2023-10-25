@@ -17,19 +17,20 @@ public class CameraController : MonoBehaviour
         if (view)
         {
             transform.position = flyerCameraPosition.position;
+            transform.rotation = flyerCameraPosition.rotation;
         }
         else
         {
             transform.position = playerCameraPosition.position;
+            transform.rotation = playerCameraPosition.rotation;
         }
     }
 
     private void controls()
     {
-        if (Input.GetKey(viewKey))
-        {
+        if (Input.GetKeyDown(viewKey))
+        {   
             view = !view;
         }
-
     }
 }
