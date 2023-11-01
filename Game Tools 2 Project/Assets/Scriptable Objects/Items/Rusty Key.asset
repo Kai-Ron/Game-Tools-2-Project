@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8df395e2d5a9b148a7999d006401442, type: 3}
   m_Name: Rusty Key
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6703224323854172329, guid: acc917c66b8bc7a4aa7d34f0d8d1edcf, type: 3}
+  Id: 1
+  uiDisplay: {fileID: 21300000, guid: 8400acfff2f3c9245b92d2537456a376, type: 3}
   type: 1
   description: This old rusty key might be able to unlock something.
-  doorValue: 1
+  doorValue: 0

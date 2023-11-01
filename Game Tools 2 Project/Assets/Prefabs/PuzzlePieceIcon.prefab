@@ -8,6 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 728217133702972126, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
+      propertyPath: m_text
+      value: 'Puzzle Pieces
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 728217133702972126, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
+      propertyPath: m_fontSize
+      value: 12.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 728217133702972126, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 12.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5819744634796741820, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_Pivot.x
       value: 0.50000006
@@ -34,11 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5819744634796741820, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5819744634796741820, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5819744634796741820, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,9 +103,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5820409786670249453, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6780790777300177368, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_Name
-      value: Image Variant 1
+      value: PuzzlePieceIcon
       objectReference: {fileID: 0}
     - target: {fileID: 7088436219347780318, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_Color.b
@@ -103,6 +122,14 @@ PrefabInstance:
     - target: {fileID: 7088436219347780318, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
       propertyPath: m_Color.r
       value: 0.44963613
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112987436512708583, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112987436512708583, guid: 12e17d0701f8d5e45a1c912f09ea1096, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
