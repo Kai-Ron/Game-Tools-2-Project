@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class LockedDoorScript : MonoBehaviour
+public class PrismDoor : MonoBehaviour
 {
 
 
@@ -25,15 +24,13 @@ public class LockedDoorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("CorrectPrism"))
         {
+            Destroy(gameObject);
 
-            if (HasRequiredItem (_requiredItem))
-            {
-                Destroy(gameObject);
-            }
         }
     }
 
 
 }
+
