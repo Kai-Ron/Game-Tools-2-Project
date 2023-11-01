@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+/*
+public class GroundItem : MonoBehaviour
 {
     public ItemObject item;
 }
+
+//work
+
+*/
