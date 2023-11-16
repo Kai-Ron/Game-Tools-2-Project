@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab8b5b8ed1f7f4897ca847cb1bf8a6, type: 3}
   m_Name: Puzzle Piece
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7269867765282218046, guid: fb79c2c975d67fe4ca09294229be1a2a, type: 3}
-  type: 2
+  Id: 0
+  uiDisplay: {fileID: 21300000, guid: 49f98ee3ef5c3254aa4ba36b775e6692, type: 3}
+  type: 0
   description: A piece of a puzzle, wonder where it goes?
