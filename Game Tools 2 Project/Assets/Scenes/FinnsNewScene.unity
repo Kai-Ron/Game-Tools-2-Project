@@ -171,6 +171,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6034480803058315714, guid: c98480cc3e4be274e8c4340cec1e1f63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f83dccc59d210a4fa1f28a1c44fbf8c, type: 2}
+    - target: {fileID: -6034480803058315714, guid: c98480cc3e4be274e8c4340cec1e1f63, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c4e1357bf19390419301ed0649ab7ff, type: 2}
+    - target: {fileID: -4683669308469848369, guid: c98480cc3e4be274e8c4340cec1e1f63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 86b859c46dcb6f244913b47202db7253, type: 2}
     - target: {fileID: 919132149155446097, guid: c98480cc3e4be274e8c4340cec1e1f63, type: 3}
       propertyPath: m_Name
       value: First Puzzle
