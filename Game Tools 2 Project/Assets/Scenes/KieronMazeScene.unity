@@ -938,6 +938,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 1195239332}
+  anim: {fileID: 919132149059341928}
 --- !u!54 &1553466487
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -985,9 +986,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.9643154
-  m_Height: 2.9068186
+  m_Height: 2.598946
   m_Direction: 1
-  m_Center: {x: 0.03752327, y: -0.4534093, z: 0}
+  m_Center: {x: 0.03752327, y: -0.29947305, z: 0}
 --- !u!1 &1569212901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652729316573}
+  - component: {fileID: 919132149059341928}
   m_Layer: 0
   m_Name: Robot Boy Idle animation
   m_TagString: Untagged
@@ -2106,6 +2108,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &919132149059341928
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149059341927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56b86dc6eb6db6c4fac2a5b03e1c67e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &992239183938120124
 GameObject:
   m_ObjectHideFlags: 0

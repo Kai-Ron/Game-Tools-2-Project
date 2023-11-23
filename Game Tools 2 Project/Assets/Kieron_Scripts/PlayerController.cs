@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
+    public Animator anim;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -62,6 +64,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(jumpKey) && grounded)
         {
             Jump();
+            anim.SetBool("IsJumping", true);
+        }
+
+        else if(!grounded)
+        {
+            anim.SetBool("IsJumping", false);
         }
     }
 
@@ -82,6 +90,18 @@ public class PlayerController : MonoBehaviour
     private void SpeedControl()
     {
         Vector3 flatVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        float CurrentSpeed = rb.velocity.magnitude;
+
+        if (CurrentSpeed < 0.1f)
+        {
+            anim.SetFloat("Speed", 0f);
+        }
+
+        else if (CurrentSpeed > 0.01f)
+        {
+            anim.SetFloat("Speed", 1f);
+        }
 
         if (flatVelocity.magnitude > moveSpeed)
         {
