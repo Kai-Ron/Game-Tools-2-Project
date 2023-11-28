@@ -48,9 +48,18 @@ public class FlyerController : MonoBehaviour
 
     private void Controls()
     {
-        inputX = Input.GetAxisRaw("Horizontal2");
-        inputZ = Input.GetAxisRaw("Vertical2");
-        inputY = Input.GetAxisRaw("Jump2");
+        if(view && !follow)
+        {
+            inputX = Input.GetAxisRaw("Horizontal");
+            inputZ = Input.GetAxisRaw("Vertical");
+            inputY = Input.GetAxisRaw("Jump");
+        }
+        else
+        {
+            inputX = Input.GetAxisRaw("Horizontal2");
+            inputZ = Input.GetAxisRaw("Vertical2");
+            inputY = Input.GetAxisRaw("Jump2");
+        }
 
         if (Input.GetKeyDown(viewKey))
         {   

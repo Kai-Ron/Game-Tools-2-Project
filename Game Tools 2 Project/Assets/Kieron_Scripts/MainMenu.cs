@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject ui;
+
     public void PlayGame()
     {
         SceneManager.LoadScene("KieronMazeScene");
@@ -14,5 +16,10 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void ContinueGame()
+    {
+        gameObject.SetActive(false);
     }
 }

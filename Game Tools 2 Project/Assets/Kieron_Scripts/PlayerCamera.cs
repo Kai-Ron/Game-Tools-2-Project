@@ -11,18 +11,20 @@ public class PlayerCamera : MonoBehaviour
     public Transform flyerOrientation;
     public Transform playerPos;
     public Transform flyerPos;
-    private Transform pos;
+    public GameObject pauseScreen;
 
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
     private bool follow = false;
     public KeyCode followKey = KeyCode.RightAlt;
+    private bool pause = false;
+    public KeyCode pauseKey = KeyCode.Tab;
+
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        pos = flyerPos;
     }
 
     private void Update()
@@ -72,8 +74,34 @@ public class PlayerCamera : MonoBehaviour
         }
     }
 
+    public void Unpause()
+    {
+        pauseScreen.SetActive(false);
+        pause = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void controls()
     {
+        if(Input.GetKeyDown(pauseKey))
+        {
+            if(pause)
+            {
+                pauseScreen.SetActive(false);
+                pause = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                pauseScreen.SetActive(true);
+                pause = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
+        
         if (Input.GetKeyDown(viewKey))
         {   
             //flyerPos.LookAt(playerPos);
@@ -89,7 +117,7 @@ public class PlayerCamera : MonoBehaviour
             }
             else if(view)
             {
-                flyerX = rotY;
+                flyerX = rotX; // original: flyerX = rotY;
                 flyerY = rotY;
                 flyerZ = zoom;
             }
