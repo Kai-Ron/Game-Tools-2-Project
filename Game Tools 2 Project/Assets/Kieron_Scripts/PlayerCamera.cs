@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerCamera : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerCamera : MonoBehaviour
     public Transform playerPos;
     public Transform flyerPos;
     private Transform pos;
+   // public GameObject PlayerModel;
 
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
@@ -23,6 +25,7 @@ public class PlayerCamera : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pos = flyerPos;
+       // PlayerModel.SetActive(false);
     }
 
     private void Update()
@@ -78,6 +81,8 @@ public class PlayerCamera : MonoBehaviour
         {   
             //flyerPos.LookAt(playerPos);
             transform.rotation = Quaternion.Euler(0,0,0);
+            //PlayerModel.SetActive(true);
+            
 
             if(view && !follow)
             {
