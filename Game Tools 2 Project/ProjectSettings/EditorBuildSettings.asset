@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FinnsScene.unity
-    guid: 538a93f0aa1da0a43909d35543166e9f
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9000d7a857625824f9cefefceff80e05
+  - enabled: 1
+    path: Assets/Scenes/KieronScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/PlayroomScene.unity
+    guid: f9d2560b278d8ab47a49ffd3c70085e7
   m_configObjects: {}
