@@ -26,6 +26,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
+    private bool view = false;
+    public KeyCode viewKey = KeyCode.LeftAlt;
+
+    private bool follow = false;
+    public KeyCode followKey = KeyCode.RightAlt;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,8 +62,26 @@ public class PlayerController : MonoBehaviour
 
     private void Controls()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-        inputY = Input.GetAxisRaw("Vertical");
+        if(view && !follow)
+        {
+            inputX = Input.GetAxisRaw("Horizontal2");
+            inputY = Input.GetAxisRaw("Vertical2");
+        }
+        else
+        {
+            inputX = Input.GetAxisRaw("Horizontal");
+            inputY = Input.GetAxisRaw("Vertical");
+        }
+
+        if (Input.GetKeyDown(viewKey))
+        {   
+            view = !view;
+        }
+
+        if (Input.GetKeyDown(followKey))
+        {   
+            follow = !follow;
+        }
 
         if (Input.GetKey(jumpKey) && grounded)
         {
