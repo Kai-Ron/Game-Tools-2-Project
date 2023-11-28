@@ -3703,6 +3703,7 @@ GameObject:
   - component: {fileID: 191495569}
   - component: {fileID: 191495568}
   - component: {fileID: 191495567}
+  - component: {fileID: 191495570}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3797,6 +3798,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191495565}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &191495570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191495565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fadd8330f264948964692edaecce1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 3
 --- !u!1 &195557107
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,7 +6138,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355016448}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -8032,7 +8046,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471497640}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -13662,7 +13676,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840790661}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -26294,7 +26308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.29
+      value: 8.65
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26310,7 +26324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.18301274
+      value: -0.18301266
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalRotation.y
@@ -26318,11 +26332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.18301274
+      value: -0.18301266
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 30
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 9151969265993451635, guid: c37f58d9992564b448bc64ed94df22a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
