@@ -82,6 +82,17 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("IsJumping", true);
         }
 
+        if (Input.GetKeyDown(viewKey))
+        {   
+            view = !view;
+        }
+
+        if (Input.GetKeyDown(followKey))
+        {   
+            follow = !follow;
+
+        }
+
     }
 
     private void Move()
