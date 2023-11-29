@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9000d7a857625824f9cefefceff80e05
+  - enabled: 1
+    path: Assets/Scenes/KieronMazeScene.unity
+    guid: 5bee410937abadc4ab819d0fc105e06f
+  - enabled: 1
+    path: Assets/Scenes/PlayroomScene.unity
+    guid: f9d2560b278d8ab47a49ffd3c70085e7
+  - enabled: 1
+    path: Assets/Scenes/LibraryScene.unity
+    guid: dbbf6a4524749754cb3e68ce5918976c
   m_configObjects: {}
