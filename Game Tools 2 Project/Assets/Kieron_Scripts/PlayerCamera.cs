@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerCamera : MonoBehaviour
 {
@@ -11,20 +12,20 @@ public class PlayerCamera : MonoBehaviour
     public Transform flyerOrientation;
     public Transform playerPos;
     public Transform flyerPos;
-    public GameObject pauseScreen;
+    private Transform pos;
+   // public GameObject PlayerModel;
 
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
     private bool follow = false;
     public KeyCode followKey = KeyCode.RightAlt;
-    private bool pause = false;
-    public KeyCode pauseKey = KeyCode.Tab;
-
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        pos = flyerPos;
+       // PlayerModel.SetActive(false);
     }
 
     private void Update()
@@ -74,38 +75,14 @@ public class PlayerCamera : MonoBehaviour
         }
     }
 
-    public void Unpause()
-    {
-        pauseScreen.SetActive(false);
-        pause = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
     private void controls()
     {
-        if(Input.GetKeyDown(pauseKey))
-        {
-            if(pause)
-            {
-                pauseScreen.SetActive(false);
-                pause = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-            else
-            {
-                pauseScreen.SetActive(true);
-                pause = true;
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-        }
-        
         if (Input.GetKeyDown(viewKey))
         {   
             //flyerPos.LookAt(playerPos);
             transform.rotation = Quaternion.Euler(0,0,0);
+            //PlayerModel.SetActive(true);
+            
 
             if(view && !follow)
             {
@@ -117,7 +94,7 @@ public class PlayerCamera : MonoBehaviour
             }
             else if(view)
             {
-                flyerX = rotX; // original: flyerX = rotY;
+                flyerX = rotY;
                 flyerY = rotY;
                 flyerZ = zoom;
             }
