@@ -30,7 +30,10 @@ public class PlayerCamera : MonoBehaviour
     private void Update()
     {
         controls();
+    }
 
+    void FixedUpdate()
+    {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
         float mouseZ = Input.GetAxisRaw("Mouse Scroll Wheel") * Time.deltaTime * sensZ;

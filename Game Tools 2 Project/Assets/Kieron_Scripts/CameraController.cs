@@ -15,7 +15,10 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
         controls();
+    }
 
+    private void FixedUpdate()
+    {
         if (view)
         {
             transform.position = flyerCameraPosition.position;

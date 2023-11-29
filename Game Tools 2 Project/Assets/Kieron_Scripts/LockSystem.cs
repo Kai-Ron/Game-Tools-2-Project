@@ -10,6 +10,7 @@ public class LockSystem : MonoBehaviour
 
     public KeyCode viewKey = KeyCode.LeftAlt;
     private bool view = false;
+    private bool atLock = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,17 +31,23 @@ public class LockSystem : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, distance, playerLayerMask))
             {
                 //ui.SetActive(true);
-
+                atLock = true;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-            else
+            else if (atLock)
+            {
+                atLock = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            /*else
             {
                 //ui.SetActive(false);
 
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-            }
+            }*/
         }
     }
 }
