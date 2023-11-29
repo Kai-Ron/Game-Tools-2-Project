@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - CorrectCylinder
-  - CorrectCube
-  - CorrectPrism
-  - CorrectHexagon
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,8 +12,8 @@ TagManager:
   - Water
   - UI
   - whatIsGround
-  - Shape
-  - Player
+  - Post Processing
+  - 
   - 
   - 
   - 

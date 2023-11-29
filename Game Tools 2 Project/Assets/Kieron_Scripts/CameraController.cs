@@ -6,8 +6,8 @@ public class CameraController : MonoBehaviour
 {
     public Transform playerCameraPosition;
     public Transform flyerCameraPosition;
-    //public Transform playerOrientation;
-    //public Transform flyerOrientation;
+    public Transform playerOrientation;
+    public Transform flyerOrientation;
     public KeyCode viewKey = KeyCode.LeftAlt;
 
     private bool view = false;

@@ -26,11 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
-    private bool view = false;
-    public KeyCode viewKey = KeyCode.LeftAlt;
-
-    private bool follow = false;
-    public KeyCode followKey = KeyCode.RightAlt;
+    public Animator anim;
 
     private void Start()
     {
@@ -48,6 +44,7 @@ public class PlayerController : MonoBehaviour
         if (grounded)
         {
             rb.drag = groundDrag;
+            anim.SetBool("IsJumping", false);
         }
         else
         {
@@ -62,31 +59,15 @@ public class PlayerController : MonoBehaviour
 
     private void Controls()
     {
-        if(view && !follow)
-        {
-            inputX = Input.GetAxisRaw("Horizontal2");
-            inputY = Input.GetAxisRaw("Vertical2");
-        }
-        else
-        {
-            inputX = Input.GetAxisRaw("Horizontal");
-            inputY = Input.GetAxisRaw("Vertical");
-        }
-
-        if (Input.GetKeyDown(viewKey))
-        {   
-            view = !view;
-        }
-
-        if (Input.GetKeyDown(followKey))
-        {   
-            follow = !follow;
-        }
+        inputX = Input.GetAxisRaw("Horizontal");
+        inputY = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKey(jumpKey) && grounded)
         {
             Jump();
+            anim.SetBool("IsJumping", true);
         }
+
     }
 
     private void Move()
@@ -106,6 +87,18 @@ public class PlayerController : MonoBehaviour
     private void SpeedControl()
     {
         Vector3 flatVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        float CurrentSpeed = rb.velocity.magnitude;
+
+        if (CurrentSpeed < 0.1f)
+        {
+            anim.SetFloat("Speed", 0f);
+        }
+
+        else if (CurrentSpeed > 0.01f)
+        {
+            anim.SetFloat("Speed", 1f);
+        }
 
         if (flatVelocity.magnitude > moveSpeed)
         {
