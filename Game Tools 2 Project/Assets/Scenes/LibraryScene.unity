@@ -18143,20 +18143,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2952723874632019830, guid: 7f88e00a346d9604096f4c2f38a6b2f5, type: 3}
+      propertyPath: playerPos
+      value: 
+      objectReference: {fileID: 822052478}
+    - target: {fileID: 2952723874632019830, guid: 7f88e00a346d9604096f4c2f38a6b2f5, type: 3}
       propertyPath: orientation
       value: 
-      objectReference: {fileID: 786264131}
+      objectReference: {fileID: 313878250}
     - target: {fileID: 5666116438695021540, guid: 7f88e00a346d9604096f4c2f38a6b2f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5666116438695021540, guid: 7f88e00a346d9604096f4c2f38a6b2f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5666116438695021540, guid: 7f88e00a346d9604096f4c2f38a6b2f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.060001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5666116438695021540, guid: 7f88e00a346d9604096f4c2f38a6b2f5, type: 3}
       propertyPath: m_LocalRotation.w
