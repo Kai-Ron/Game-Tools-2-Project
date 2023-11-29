@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public int room = 3;
+    public int room;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class SceneChanger : MonoBehaviour
     {
         if(other.transform.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(room);
         }
     }
 }
