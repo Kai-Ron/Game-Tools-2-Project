@@ -36,14 +36,14 @@ public class FlyerController : MonoBehaviour
     private void Update()
     {
         Controls();
-        SpeedControl();
-
-        rb.drag = drag;
     }
 
     private void FixedUpdate()
     {
         Move();
+        SpeedControl();
+
+        rb.drag = drag;
     }
 
     private void Controls()

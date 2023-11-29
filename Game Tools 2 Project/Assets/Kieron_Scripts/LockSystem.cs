@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LockSystem : MonoBehaviour
 {
-    public float distance = 2.5f;
+    public float distance = 5f;
     public LayerMask playerLayerMask;
     public GameObject ui;
 
