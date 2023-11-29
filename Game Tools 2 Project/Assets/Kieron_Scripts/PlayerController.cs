@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         if (grounded)
         {
             rb.drag = groundDrag;
+            anim.SetBool("IsJumping", false);
         }
         else
         {
