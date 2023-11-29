@@ -26,6 +26,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
+    private bool view = false;
+    public KeyCode viewKey = KeyCode.LeftAlt;
+
+    private bool follow = false;
+    public KeyCode followKey = KeyCode.RightAlt;
+
     public Animator anim;
 
     private void Start()
@@ -36,10 +42,15 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, ((playerHeight * 0.5f) + 0.2f), whatIsGround);
-
         Controls();
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
         SpeedControl();
+
+        grounded = Physics.Raycast(transform.position, Vector3.down, ((playerHeight * 0.5f) + 0.2f), whatIsGround);
 
         if (grounded)
         {
@@ -52,15 +63,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
-
     private void Controls()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-        inputY = Input.GetAxisRaw("Vertical");
+        if(view && !follow)
+        {
+            inputX = Input.GetAxisRaw("Horizontal2");
+            inputY = Input.GetAxisRaw("Vertical2");
+        }
+        else
+        {
+            inputX = Input.GetAxisRaw("Horizontal");
+            inputY = Input.GetAxisRaw("Vertical");
+        }
 
         if (Input.GetKey(jumpKey) && grounded)
         {

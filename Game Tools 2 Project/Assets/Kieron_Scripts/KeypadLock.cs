@@ -31,11 +31,13 @@ public class KeypadLock : MonoBehaviour
             ResetCode();
             code += number;
             display.text = code;
+            Debug.Log(number);
         }
         else
         {
             code += number;
             display.text = code;
+            Debug.Log(number);
         }
     }
 
