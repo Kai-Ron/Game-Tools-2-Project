@@ -17,8 +17,8 @@ public class PlayerCamera : MonoBehaviour
 
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
-    private bool follow = false;
-    public KeyCode followKey = KeyCode.RightAlt;
+    //private bool follow = false;
+    //public KeyCode followKey = KeyCode.RightAlt;
     private bool pause = false;
     public KeyCode pauseKey = KeyCode.Tab;
 
@@ -41,7 +41,7 @@ public class PlayerCamera : MonoBehaviour
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
         float mouseZ = Input.GetAxisRaw("Mouse Scroll Wheel") * Time.deltaTime * sensZ;
 
-        if (view && follow)
+        /*if (view && follow)
         {
             rotY += mouseX;
             rotX -= mouseY;
@@ -66,7 +66,7 @@ public class PlayerCamera : MonoBehaviour
             if(follow)
             {
                 flyerPos.position = playerPos.position + (playerPos.up * 2) ;
-            }
+            }*/
             
             rotY += mouseX;
             rotX -= mouseY;
@@ -77,7 +77,7 @@ public class PlayerCamera : MonoBehaviour
 
             flyerOrientation.rotation = Quaternion.Euler(0, rotY, 0);
             playerOrientation.rotation = Quaternion.Euler(0, rotY, 0);
-        }
+        /*}*/
     }
 
     public void Unpause()
@@ -115,7 +115,7 @@ public class PlayerCamera : MonoBehaviour
             //PlayerModel.SetActive(true);
             
 
-            if(view && !follow)
+            if(view /*&& !follow*/)
             {
                 flyerX = rotX;
                 flyerY = rotY;
@@ -123,13 +123,13 @@ public class PlayerCamera : MonoBehaviour
                 rotX = playerX;
                 rotY = playerY;
             }
-            else if(view)
+            /*if(view)
             {
                 flyerX = rotY;
                 flyerY = rotY;
                 flyerZ = zoom;
-            }
-            else if (!follow)
+            }*/
+            else /*if (!follow)*/
             {
                 playerX = rotX;
                 playerY = rotY;
@@ -137,16 +137,16 @@ public class PlayerCamera : MonoBehaviour
                 rotY = flyerY;
                 zoom = flyerZ;
             }
-            else
+            /*else
             {
                 playerX = rotX;
                 playerY = rotY;
                 zoom = flyerZ;
-            }
+            }*/
             view = !view;
         }
 
-        if (Input.GetKeyDown(followKey))
+        /*if (Input.GetKeyDown(followKey))
         {   
             //flyerPos.LookAt(playerPos);
 
@@ -173,6 +173,6 @@ public class PlayerCamera : MonoBehaviour
             //flyerPos.LookAt(playerPos);
 
             follow = !follow;
-        }
+        }*/
     }
 }
