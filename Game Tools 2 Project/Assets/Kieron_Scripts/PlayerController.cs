@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
 
-    private bool follow = false;
-    public KeyCode followKey = KeyCode.RightAlt;
+    //private bool follow = false;
+    //public KeyCode followKey = KeyCode.RightAlt;
 
     public Animator anim;
 
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     private void Controls()
     {
-        if(view && !follow)
+        if(view /*&& !follow*/)
         {
             inputX = Input.GetAxisRaw("Horizontal2");
             inputY = Input.GetAxisRaw("Vertical2");
@@ -87,11 +87,10 @@ public class PlayerController : MonoBehaviour
             view = !view;
         }
 
-        if (Input.GetKeyDown(followKey))
+        /*if (Input.GetKeyDown(followKey))
         {   
             follow = !follow;
-
-        }
+        }*/
 
     }
 

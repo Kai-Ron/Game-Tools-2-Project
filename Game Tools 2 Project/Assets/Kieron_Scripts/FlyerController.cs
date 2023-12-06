@@ -24,8 +24,8 @@ public class FlyerController : MonoBehaviour
     private bool view = false;
     public KeyCode viewKey = KeyCode.LeftAlt;
 
-    private bool follow = false;
-    public KeyCode followKey = KeyCode.RightAlt;
+    //private bool follow = false;
+    //public KeyCode followKey = KeyCode.RightAlt;
 
     private void Start()
     {
@@ -48,7 +48,7 @@ public class FlyerController : MonoBehaviour
 
     private void Controls()
     {
-        if(view && !follow)
+        if(view /*&& !follow*/)
         {
             inputX = Input.GetAxisRaw("Horizontal");
             inputZ = Input.GetAxisRaw("Vertical");
@@ -66,26 +66,25 @@ public class FlyerController : MonoBehaviour
             view = !view;
         }
 
-        if (Input.GetKeyDown(followKey))
+        /*if (Input.GetKeyDown(followKey))
         {   
             follow = !follow;
-
-        }
+        }*/
     }
 
     private void Move()
     {
-        if(!follow)
-        {
+        /*if(!follow)
+        {*/
             moveDirection = (orientation.forward * inputZ) + (orientation.up * inputY) + (orientation.right * inputX);
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        }
+        /*}*/
     }
 
     private void SpeedControl()
     {
-        if(!follow)
-        {
+        /*if(!follow)
+        {*/
             Vector3 flatVelocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
 
             if (flatVelocity.magnitude > moveSpeed)
@@ -93,6 +92,6 @@ public class FlyerController : MonoBehaviour
                 Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
                 rb.velocity = new Vector3(limitedVelocity.x, limitedVelocity.y, limitedVelocity.z);
             }
-        }
+        /*}*/
     }
 }
