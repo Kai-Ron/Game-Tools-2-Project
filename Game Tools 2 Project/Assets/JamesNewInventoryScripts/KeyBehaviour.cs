@@ -6,23 +6,23 @@ public class KeyBehaviour : MonoBehaviour
 {
     [SerializeField] InventoryManager.AllItems _itemType;
 
-    public GameObject PickUpText;
+    //public GameObject PickUpText;
 
     private void Start()
     {
-        PickUpText.SetActive(false);
+        //PickUpText.SetActive(false);
     }
 
     private void OnTriggerStay(Collider collision)
     {
         if (collision.CompareTag("Player"))
             {
-            PickUpText.SetActive(true);
+            //PickUpText.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
 
                 PickUp();
-                PickUpText.SetActive(false);
+                //PickUpText.SetActive(false);
 
             }
         }

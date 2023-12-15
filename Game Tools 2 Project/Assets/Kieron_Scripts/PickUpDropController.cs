@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpDropController : MonoBehaviour
 {
-    public float pickUpDist = 2.5f;
+    public float pickUpDist = 5f;
     public LayerMask pickupLayerMask;
     public Transform grabPoint;
     private GameObject item;
@@ -31,7 +31,7 @@ public class PickUpDropController : MonoBehaviour
                     {
                         itemRB = item.GetComponent<Rigidbody>();
                         itemRB.useGravity = false;
-                        itemRB.drag = 10;
+                        //itemRB.drag = 10;
                     }
                 }
             }
@@ -46,6 +46,7 @@ public class PickUpDropController : MonoBehaviour
 
         if (item != null)
         {
+            //item.transform.position = grabPoint.position;
             itemRB.MovePosition(grabPoint.position);
         }
     }
