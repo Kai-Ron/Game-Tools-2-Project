@@ -5,11 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject ui;
-
+    public GameObject options;
+    public GameObject Pause;
+    private bool IsPaused = false;
+    
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab) && IsPaused == false)
+        {
+           IsPaused = true;          
+           Pause.SetActive(true);
+           Debug.Log("Paused");
+           
+        }
+       
     }
 
     public void QuitGame()
@@ -20,6 +34,6 @@ public class MainMenu : MonoBehaviour
 
     public void ContinueGame()
     {
-        gameObject.SetActive(false);
+        options.SetActive(false);
     }
 }
