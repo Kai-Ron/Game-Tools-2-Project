@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayroomSceneReturn.unity
     guid: d980878acd3c6524d96724190d6783c1
   - enabled: 1
-    path: Assets/Scenes/KieronMazeScene.unity
-    guid: 91c591e687bdf7046b44ecfb46d3d85d
+    path: Assets/Scenes/MazePuzzleReturn.unity
+    guid: 49a2f35ff7f7aeb49a4d6c9f717d5d0e
   m_configObjects: {}

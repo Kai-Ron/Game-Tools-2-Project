@@ -13097,6 +13097,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1684325437868782605, guid: fd07c338f9e820945856e1b68ae57c59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4096150487255919056, guid: fd07c338f9e820945856e1b68ae57c59, type: 3}
       propertyPath: m_Name
       value: UI
@@ -13179,6 +13183,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4946158159453112151, guid: fd07c338f9e820945856e1b68ae57c59, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608419116187633122, guid: fd07c338f9e820945856e1b68ae57c59, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9171919472136439430, guid: fd07c338f9e820945856e1b68ae57c59, type: 3}

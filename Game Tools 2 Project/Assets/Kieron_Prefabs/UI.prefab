@@ -1786,10 +1786,17 @@ RectTransform:
   - {fileID: 4075828122085957778}
   m_Father: {fileID: 7079014364635528561}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -100.466}
   m_SizeDelta: {x: 107.114, y: 100.466}
+=======
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 30, y: 30}
+>>>>>>> Stashed changes
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &8506531807500390111
 CanvasRenderer:
@@ -3347,7 +3354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6168542896641449300
 RectTransform:
   m_ObjectHideFlags: 0
