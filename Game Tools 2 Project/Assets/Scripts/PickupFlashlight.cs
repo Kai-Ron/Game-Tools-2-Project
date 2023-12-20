@@ -8,11 +8,13 @@ public class PickupFlashlight : MonoBehaviour
 
     public GameObject PickUpText;
     public GameObject PlayerFlashlight;
+    private FlashlightScript flashlightScript;
 
     private void Start()
     {
         PickUpText.SetActive(false);
         PlayerFlashlight.SetActive(false);
+        flashlightScript = PlayerFlashlight.GetComponent<FlashlightScript>();
     }
 
     private void OnTriggerStay(Collider collision)
@@ -25,6 +27,7 @@ public class PickupFlashlight : MonoBehaviour
             {
                 Debug.Log("E Pressed");
                 PlayerFlashlight.SetActive(true);
+                flashlightScript.LightOn();
                 PickUpText.SetActive(false);
                 PickUp();
                 Destroy(gameObject);

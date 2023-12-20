@@ -66,7 +66,7 @@ Material:
     m_Ints: []
     m_Floats:
     - MyGlossiness: 0
-    - MyLightAngle: 30
+    - MyLightAngle: 1
     - MyMetallic: 0
     - MyStrengthScalor: 50
     - _BumpScale: 1

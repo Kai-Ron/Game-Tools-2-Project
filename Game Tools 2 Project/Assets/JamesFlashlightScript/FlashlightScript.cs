@@ -6,8 +6,7 @@ public class FlashlightScript : MonoBehaviour
 {
     private Light flashlight;
     private float minAngle = 0f;
-    private float maxAngle = 40f;
-    private bool IsMaxing = false;
+    public float maxAngle = 40f;
 
     private void Start()
     {
@@ -16,20 +15,9 @@ public class FlashlightScript : MonoBehaviour
         flashlight.spotAngle = minAngle;
     }
 
-    private void Update()
+    public void LightOn()
     {
-        if (Input.GetKeyDown(KeyCode.F) && IsMaxing == false)
-        {
-            flashlight.enabled = !flashlight.enabled;
-            flashlight.spotAngle = maxAngle;
-            IsMaxing = true;
-        }
-
-        else if(Input.GetKeyDown(KeyCode.F) && IsMaxing == true)
-        {
-            flashlight.spotAngle = minAngle;
-            IsMaxing = false;
-            flashlight.enabled = false;
-        }
+        flashlight.enabled = !flashlight.enabled;
+        flashlight.spotAngle = maxAngle;
     }
 }
