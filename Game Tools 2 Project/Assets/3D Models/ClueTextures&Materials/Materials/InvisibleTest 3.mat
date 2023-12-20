@@ -87,8 +87,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - MyColor: {r: 0, g: 0, b: 1, a: 1}
-    - MyLightDirection: {r: 0.094397396, g: 0.035251305, b: -0.9949103, a: 0}
-    - MyLightPosition: {r: 0.87577736, g: -0.7150475, b: 1.8024669, a: 0}
+    - MyLightDirection: {r: -0.8253087, g: -0.03770911, b: -0.5634214, a: 0}
+    - MyLightPosition: {r: 16.513418, g: 1.9188828, b: -0.42114097, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
