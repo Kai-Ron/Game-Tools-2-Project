@@ -37,4 +37,12 @@ public class SceneChanger : MonoBehaviour
             
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.transform.gameObject.tag == "Player")
+        {
+            SceneTransitonText.SetActive(false);
+        }
+    }
 }
