@@ -30216,7 +30216,7 @@ Transform:
   m_GameObject: {fileID: 1887682536}
   serializedVersion: 2
   m_LocalRotation: {x: 0.02835223, y: 0.6503203, z: -0.75874186, w: 0.024300799}
-  m_LocalPosition: {x: -8.08, y: 7.77, z: -1.71}
+  m_LocalPosition: {x: -6.37, y: 8.2, z: 1.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34839,6 +34839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mat: {fileID: 2100000, guid: 4b6249d199c65f04fbf3b7acaff342da, type: 2}
   SpotLight: {fileID: 1887682537}
+  IsON: 0
 --- !u!1 &6972403429068926760
 GameObject:
   m_ObjectHideFlags: 0
@@ -34887,6 +34888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mat: {fileID: 2100000, guid: 4b6249d199c65f04fbf3b7acaff342da, type: 2}
   SpotLight: {fileID: 1887682537}
+  IsON: 0
 --- !u!1 &8022602955313781581
 GameObject:
   m_ObjectHideFlags: 0
@@ -34920,6 +34922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mat: {fileID: 2100000, guid: 4b6249d199c65f04fbf3b7acaff342da, type: 2}
   SpotLight: {fileID: 1887682537}
+  IsON: 0
 --- !u!33 &8057150961276852129
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34942,6 +34945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mat: {fileID: 2100000, guid: 4b6249d199c65f04fbf3b7acaff342da, type: 2}
   SpotLight: {fileID: 1887682537}
+  IsON: 0
 --- !u!23 &8699224784437571447
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34998,6 +35002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mat: {fileID: 2100000, guid: 4b6249d199c65f04fbf3b7acaff342da, type: 2}
   SpotLight: {fileID: 1887682537}
+  IsON: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
