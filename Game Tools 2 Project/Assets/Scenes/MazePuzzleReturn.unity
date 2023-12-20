@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.052701533, g: 0.018024879, b: 0.072624885, a: 1}
+  m_IndirectSpecularColor: {r: 0.05218497, g: 0.017969737, b: 0.07209078, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2025,6 +2025,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787728964}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &867569006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1650558443969327553, guid: 820c1eb06a675c2488c15fc404133741, type: 3}
+  m_PrefabInstance: {fileID: 1177799916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915792019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +2743,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333901644}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1360529190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7431268558019999180, guid: 820c1eb06a675c2488c15fc404133741, type: 3}
+  m_PrefabInstance: {fileID: 1177799916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423144166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4724,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089172002}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2089839402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1392596047361241899, guid: 820c1eb06a675c2488c15fc404133741, type: 3}
+  m_PrefabInstance: {fileID: 1177799916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2092464263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,7 +5058,7 @@ PrefabInstance:
     - target: {fileID: 2647656164647561682, guid: 9c67a8b89ecf3fe43b47b290e264e30e, type: 3}
       propertyPath: flyerCameraPosition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1360529190}
     - target: {fileID: 2647656164647561682, guid: 9c67a8b89ecf3fe43b47b290e264e30e, type: 3}
       propertyPath: playerCameraPosition
       value: 
@@ -5099,7 +5114,7 @@ PrefabInstance:
     - target: {fileID: 8738264431661938554, guid: 9c67a8b89ecf3fe43b47b290e264e30e, type: 3}
       propertyPath: flyerPos
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2089839402}
     - target: {fileID: 8738264431661938554, guid: 9c67a8b89ecf3fe43b47b290e264e30e, type: 3}
       propertyPath: playerPos
       value: 
@@ -5111,7 +5126,7 @@ PrefabInstance:
     - target: {fileID: 8738264431661938554, guid: 9c67a8b89ecf3fe43b47b290e264e30e, type: 3}
       propertyPath: flyerOrientation
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 867569006}
     - target: {fileID: 8738264431661938554, guid: 9c67a8b89ecf3fe43b47b290e264e30e, type: 3}
       propertyPath: playerOrientation
       value: 
