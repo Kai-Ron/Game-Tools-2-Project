@@ -21,7 +21,7 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.transform.gameObject.tag == "Player")
         {
