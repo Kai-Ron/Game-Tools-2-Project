@@ -21,7 +21,7 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if(other.transform.gameObject.tag == "Player")
         {
@@ -29,6 +29,7 @@ public class SceneChanger : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("Door attempted to be opened");
                 DontDestroyOnLoad(inventoryManager);
                 SceneManager.LoadScene(room);
                 SceneTransitonText.SetActive(false);
