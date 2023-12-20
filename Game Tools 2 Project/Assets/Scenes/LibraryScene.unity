@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8671635, g: 0.67241174, b: 0.5176868, a: 1}
+  m_IndirectSpecularColor: {r: 0.86716557, g: 0.67241514, b: 0.5176881, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4048,6 +4048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 3
+  inventoryManager: {fileID: 0}
 --- !u!1 &195557107
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +4963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01da851465abf4449a23cb3c37d4e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemType: 0
+  _itemType: 10
   PickUpText: {fileID: 749666005}
 --- !u!4 &235795017 stripped
 Transform:
@@ -11177,6 +11178,10 @@ PrefabInstance:
       propertyPath: room
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5484077842882773592, guid: 3a559a265656e2847a5021d370de13c4, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 84584371}
     - target: {fileID: 7986440479624249645, guid: 3a559a265656e2847a5021d370de13c4, type: 3}
       propertyPath: m_Name
       value: NexrRoomDoor
