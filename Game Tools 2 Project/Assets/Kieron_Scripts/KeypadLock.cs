@@ -10,12 +10,14 @@ public class KeypadLock : MonoBehaviour
     public TMP_Text display;
     public GameObject item;
     public GameObject box;
+    public GameObject shovel;
 
 
     // Start is called before the first frame update
     void Start()
     {
         count = code.Length;
+        shovel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class KeypadLock : MonoBehaviour
         {
             box.SetActive(false);
             item.SetActive(true);
+            shovel.SetActive(true);
             //item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y -2.5f, item.transform.position.z);
         }
         else

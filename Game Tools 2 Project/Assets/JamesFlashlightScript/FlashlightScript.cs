@@ -6,7 +6,7 @@ public class FlashlightScript : MonoBehaviour
 {
     private Light flashlight;
     private float minAngle = 0f;
-    private float maxAngle = 30f;
+    private float maxAngle = 40f;
     private bool IsMaxing = false;
 
     private void Start()

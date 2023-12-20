@@ -41,7 +41,9 @@ public class InventoryManager : MonoBehaviour
         PuzzlePiece1, 
         PuzzlePiece2, 
         PuzzlePiece3, 
-        PuzzlePiece4
+        PuzzlePiece4,
+
+        Shovel
     }
 
 

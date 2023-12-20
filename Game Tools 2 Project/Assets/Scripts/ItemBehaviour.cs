@@ -5,18 +5,8 @@ using UnityEngine;
 public class ItemBehaviour : MonoBehaviour
 {
     [SerializeField] InventoryManager.AllItems _itemType;
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            InventoryManager.Instance.AddItem(_itemType);
-
-        }
-    }
     
         public GameObject PickUpText;
-
-    
 
     private void Start()
     {
@@ -31,12 +21,19 @@ public class ItemBehaviour : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
 
-                //PickUp();
+                PickUp();
                 PickUpText.SetActive(false);
 
             }
 
         }
 
+
+    }
+
+    public void PickUp()
+    {
+        InventoryManager.Instance.AddItem(_itemType);
+        this.gameObject.SetActive(false);
     }
 }
