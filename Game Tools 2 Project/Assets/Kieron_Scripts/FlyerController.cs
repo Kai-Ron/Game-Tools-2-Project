@@ -58,7 +58,7 @@ public class FlyerController : MonoBehaviour
         {
             inputX = Input.GetAxisRaw("Horizontal2");
             inputZ = Input.GetAxisRaw("Vertical2");
-            inputY = Input.GetAxisRaw("Jump2");
+            inputY = Input.GetAxisRaw("Jump");
         }
 
         if (Input.GetKeyDown(viewKey))
