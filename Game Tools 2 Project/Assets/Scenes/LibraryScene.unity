@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.86716557, g: 0.67241514, b: 0.5176881, a: 1}
+  m_IndirectSpecularColor: {r: 0.8671635, g: 0.67241174, b: 0.5176868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4049,6 +4049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: 3
   inventoryManager: {fileID: 0}
+  SceneTransitonText: {fileID: 0}
 --- !u!1 &195557107
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,7 +5186,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.24705882, g: 0, b: 0.7490196, a: 1}
   m_Intensity: 3
   m_Range: 30
   m_SpotAngle: 1
@@ -26129,6 +26130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAngle: 100
+  hasFlashlight: 0
+  viewKey: 308
 --- !u!4 &1516934001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6067abebad4ceee4886862a89df42430, type: 3}
