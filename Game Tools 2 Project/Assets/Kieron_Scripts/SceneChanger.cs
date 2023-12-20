@@ -7,11 +7,12 @@ public class SceneChanger : MonoBehaviour
 {
     public int room;
     public GameObject inventoryManager;
+    public GameObject SceneTransitonText;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        SceneTransitonText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,12 +21,19 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collision other)
     {
         if(other.transform.gameObject.tag == "Player")
         {
-            DontDestroyOnLoad(inventoryManager);
-            SceneManager.LoadScene(room);
+            SceneTransitonText.SetActive(true);
+
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                DontDestroyOnLoad(inventoryManager);
+                SceneManager.LoadScene(room);
+                SceneTransitonText.SetActive(false);
+            }
+            
         }
     }
 }
