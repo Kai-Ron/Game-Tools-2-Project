@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: 'BigFart Productions '
+  companyName: Puzzlers Mansion Team
   productName: Puzzlers Mansion
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -40,6 +40,8 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
+  - logo: {fileID: 21300000, guid: 04e8a85558dc7f244b9847f1f2df5133, type: 3}
+    duration: 4
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: efd4ad116b6d57b4b876e6319705acd0, type: 3}
@@ -157,7 +159,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.Puzzlers-Mansion-Team.Puzzlers-Mansion
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -623,9 +626,9 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 3690e16129c96c942afb4e0f84bf6fdd, type: 3}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 11e2d5318c32f67449952ea0e0d4b9a0, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
-  blurSplashScreenBackground: 1
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 16
   webGLExceptionSupport: 1

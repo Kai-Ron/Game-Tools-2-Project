@@ -17,6 +17,7 @@ public class KeypadLock : MonoBehaviour
     void Start()
     {
         count = code.Length;
+        code = "";
         shovel.SetActive(false);
     }
 
